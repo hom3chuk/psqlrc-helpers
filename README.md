@@ -43,6 +43,8 @@ This command shows a brief report on the current database status:
 
 This is the command you want to occasionally run when checking what is up with the server.
 
+![image](https://user-images.githubusercontent.com/3368441/207514591-d120bf9c-78f1-4767-bfb3-ee3f01e57436.png)
+
 #### SQL
 
 ```postgresql
@@ -83,6 +85,8 @@ from seq_scans;
 
 Lists all available commands
 
+![image](https://user-images.githubusercontent.com/3368441/207514851-420b70d2-d59a-48dd-9b5c-815c7d2ab376.png)
+
 #### SQL
 ```postgresql
 select *
@@ -104,6 +108,8 @@ This is the only command that requires extra input, the query to run `EXPLAIN` a
 :fe select * from pg_stat_activity
 ```
 
+![image](https://user-images.githubusercontent.com/3368441/207515301-55473798-cd18-48a8-831c-91cf80f7c1fc.png)
+
 #### SQL
 
 ```postgresql
@@ -113,6 +119,8 @@ explain (analyze, buffers, verbose)
 ### `:scanstat`, or `:ss`
 
 Lists [indexed/seq scan](https://www.depesz.com/2013/04/27/explaining-the-unexplainable-part-2/) ratio per table.
+
+![image](https://user-images.githubusercontent.com/3368441/207515505-b709427c-63d6-4cf6-a0de-442e37d9840c.png)
 
 #### SQL
 
@@ -130,6 +138,8 @@ order by 5, 3 desc, 1;
 ### `:queries`, or `:q`
 
 Lists currently running queries ordered by execution time desc.
+
+![image](https://user-images.githubusercontent.com/3368441/207515682-ca2e12e1-00d8-4c13-a65f-57af03f16df6.png)
 
 #### SQL
 
@@ -149,6 +159,8 @@ order by 2 desc nulls last, 1 desc;
 
 Lists all active LISTEN channels
 
+![image](https://user-images.githubusercontent.com/3368441/207515854-4dcaf03f-ca1e-48f2-a3ed-a1505067a563.png)
+
 #### SQL
 ```postgresql
 select pid, now() - query_start as "time", usename, query
@@ -160,6 +172,8 @@ order by 2 desc nulls last, 1 desc;
 ### `:extensions`, or `:e`
 
 Lists all extensions installed on the server, outdated first.
+
+![image](https://user-images.githubusercontent.com/3368441/207516009-ffaa535a-fbb5-4e88-85f4-918a4c1a389a.png)
 
 #### SQL
 
